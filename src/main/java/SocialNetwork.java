@@ -7,7 +7,7 @@ public class SocialNetwork {
 
 
     // function that computes the shortest path between two users using bfs algorithm
-    public List<User> shortestPath(User start, User destination) {
+    public Integer shortestPath(User start, User destination) {
         List<User> shortestPath = new ArrayList<>();
         List<User> queue = new ArrayList<>();
         Map<User, User> previous = new java.util.HashMap<>();
@@ -41,7 +41,7 @@ public class SocialNetwork {
             current = previous.get(current);
 
         }
-        return shortestPath;
+        return shortestPath.size()-1;
     }
 
     public void addUser(User user) {

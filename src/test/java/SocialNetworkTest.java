@@ -60,7 +60,7 @@ public class SocialNetworkTest {
         socialNetwork.addUser(user2);
         socialNetwork.addUser(user3);
         socialNetwork.addUser(user4);
-        assertEquals(2, socialNetwork.shortestPath(user1, user4).size()-1);
+        assertEquals((Integer)2, socialNetwork.shortestPath(user1, user4));
     }
 
 }
