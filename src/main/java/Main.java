@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         User user1 = new User("John");
@@ -27,5 +30,6 @@ public class Main {
 
         System.out.println(socialNetwork);
         System.out.println(socialNetwork.shortestPath(user1, user7));
+
     }
 }

@@ -19,6 +19,7 @@ public class SocialNetwork {
             if (current.equals(destination)) {
                 break;
             }
+            //go through all the friends of the current user and add them to the queue if they are not visited
             for (User friend : current.getFriends()) {
                 if (!visited.contains(friend)) {
                     queue.add(friend);
@@ -27,6 +28,13 @@ public class SocialNetwork {
                 }
             }
         }
+
+        //couldn't find the path to the target node
+        if(!previous.containsKey(destination)) {
+            return null;
+        }
+
+        //build the path from the destination to the start
         User current = destination;
         while (current != null) {
             shortestPath.add(current);
@@ -37,7 +45,13 @@ public class SocialNetwork {
     }
 
     public void addUser(User user) {
-        users.add(user);
+        if (!users.contains(user)) {
+            users.add(user);
+        }
+    }
+
+    public List<User> getUsers() {
+        return users;
     }
 
     @Override

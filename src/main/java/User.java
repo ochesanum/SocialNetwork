@@ -10,8 +10,10 @@ public class User {
     }
 
     public void addFriend(User user) {
-        friends.add(user);
-        user.friends.add(this);
+        if(!friends.contains(user) && user != this) {
+            friends.add(user);
+            user.friends.add(this);
+        }
     }
 
     public List<User> getFriends() {
