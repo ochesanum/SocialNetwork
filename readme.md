@@ -13,6 +13,7 @@ Also, using DFS, two users could be only one degree of separation from each othe
 3. Please enumerate the test cases you considered and explain their relevance.
 
 I considered the following test cases:
+
     1. The starting node, and the destination node be the same.
     2. Having no path between the starting node and the destination node.
     3. Having a cyclic graph as an input in order to check if the algorithm would function correctly by only visiting the friend nodes that have not already been visited.
